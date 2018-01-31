@@ -1,0 +1,68 @@
+/*
+ * HEADER
+ *  COLOR :
+  *   -fond : #282c34;
+      -vert : #a6e22e;
+      -rose : #f92672;
+      -bleu : #48cdef;
+      -blanc: #abb2bf;
+      -jaune: #fd9020;
+*/
+body { font-family: 'Open Sans', sans-serif; }
+/** background color **/
+header, .savoir_faire, .bgc-header, footer{ background-color: #282c34; padding-bottom: 20px; padding-top: 20px}
+.navbar { border-radius: 0px; margin-bottom: 0px; }
+/** COLOR **/
+.vert{color:#a6e22e; }
+.rose{color:#f92672;}
+.bleu{color:#48cdef;}
+.blanc{color:#abb2bf;}
+.orange{color:#fd9020;}
+.fond{color:#282c34}
+.bvert{background-color: #a6e22e; }
+.brose{background-color: #f92672; }
+.bbleu{background-color: #48cdef; }
+.borange{background-color:#fd9020; }
+.bviolet{background-color: #563b7e; }
+.bjaune{background-color: #f7df1e; }
+.bgris{background-color: #555555; }
+/** MENU **/
+.navbar-default{ background-color: transparent; border: none; }
+.navbar-default .navbar-nav > li > a:hover { color: #f92672 !important;}
+header .navbar-default .navbar-nav > li > a, ol li { color: #abb2bf; }
+ol li { font-size: 1.4em}
+
+/** MENU RS **/
+.rs { 
+  display: flex;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-left: 18px;
+ }
+.rs figure a img { width: 40px; margin-right: 12px}
+
+/** ALL ICONS **/
+.fix-icon {
+  width: 60px;
+  margin-right: 20px;
+  margin-top: 5px;
+  float: left;
+}
+/** PORTFOLIO **/
+/** CARDS **/
+.fix-relative-img { position: relative }
+.fix-absolute-img { 
+  position: absolute; 
+  display: flex; 
+  bottom: -15px; 
+  right: 10px; }
+.resize-git-view { width: 40px; height:40px }
+
+/** SAVOIR FAIRE **/
+.thumbnail { background-color: transparent; }
+
+/** FOOTER **/
+.glyphicon-save:before {
+  padding-right: 10px;
+  color: black;
+}
