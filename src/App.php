@@ -14,10 +14,6 @@ class App {
   private static $_card;
   private static $_skill;
 
-  public static function loadAppli() {
-    require '../vendor/autoload.php';
-  }
-
   public static function getInstanceDb() {
     if(static::$_db === NULL) {
       static::$_db = new Mysql();
