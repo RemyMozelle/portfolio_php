@@ -2,10 +2,6 @@
 
 require_once '../vendor/autoload.php';
 
-define('ROOT', dirname(__DIR__));
-define('SRC', dirname(__DIR__) . '/src/');
-define('IMG', '../assets/');
-
 use Timoz\App;
 use Timoz\Controllers\MenuController;
 use Timoz\Controllers\CardController;
