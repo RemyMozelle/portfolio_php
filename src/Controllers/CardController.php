@@ -7,7 +7,6 @@ use Timoz\App;
 class CardController {
   
   public function showCard (){
-    $card = App::getInstanceCard()->getCard();
-    include SRC . "Views/includes/portfolio/inc_portfolio.php";
+    return $card = App::getInstanceCard()->getCard();
   }
 }

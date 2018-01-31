@@ -1,21 +1,21 @@
 <section class="row">
-  <?php foreach($card as $cards) { ?>
+  {% for card in cards %}
     <article class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <div class="fix-relative-img">
-          <img src="<?php echo IMG . $cards->url; ?>" alt="intégration the montaigne" style="width:100%;height:232px;">
+          <img src="../assets/{{ card.url }}" alt="intégration the montaigne" style="width:100%;height:232px;">
           <figure class="fix-absolute-img">
-            <a target="_blank" href="<?php echo $cards->github; ?>">
-              <img class="resize-git-view" src="<?php echo IMG . 'img/contact/git.png'; ?>" alt="">
+            <a target="_blank" href="{{ card.github }}">
+              <img class="resize-git-view" src="../assets/img/contact/git.png" alt="">
             </a>
           </figure>
         </div>
         <div class="caption">
           <h3>
-            <?php echo $cards->name; ?>
+            {{ card.name }}
           </h3>
           <p>
-          <?php echo $cards->description; ?>
+            {{ card.description }}
           </p>
           <p style="font-size:1em;">
             <?php $techno = explode(',', $cards->technologies); ?>
@@ -27,5 +27,5 @@
         </div>
       </div>
     </article>
-<?php } ?>
+  {% endfor %}
 </section>

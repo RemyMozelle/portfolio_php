@@ -12,24 +12,17 @@ use Timoz\Controllers\CardController;
 use Timoz\Controllers\SkillController;
 
 $loader = new Twig_Loader_Filesystem('../src/Views');
-$twig = new Twig_Environment($loader, ["cache" => false]);
+$twig = new Twig_Environment($loader, ["cache" => false, "debug" => true]);
+$twig->addExtension(new Twig_Extension_Debug());
 
-echo $template = $twig->render('index.html.twig');
+$menuController = new MenuController();
+$cardController = new CardController();
+$skillController = new SkillController();
 
-/*
-ob_start();
+echo $template = $twig->render('index.html.twig', [
+  "menus" => $menuController->showMenu(),
+  "cards" => $cardController->showCard(),
+  "skills" => $skillController->showSkill()
+]);
 
-if(isset($_GET)){
-  $menuController = new MenuController();
-  $menuController->showMenu();
-  $cardController = new CardController();
-  $cardController->showCard();
-  $skillController = new SkillController();
-  $skillController->showSkill();
-}
-
-$content = ob_get_clean();
-
-require('../templates/default.php');
-*/
 ?>

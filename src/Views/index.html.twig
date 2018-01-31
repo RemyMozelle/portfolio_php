@@ -4,3 +4,29 @@
   <div id="acceuil"></div>
   {{ include('includes/header/inc_header.html.twig')}}
 {% endblock %}
+
+{% block content %}
+  <!-- PORTFOLIO -->
+  <div id="portfolio"></div>
+  <div class="container-fluid portfolio">
+    <div class="container">
+      {{ include('includes/portfolio/inc_portfolio.html.twig')}}
+    </div>
+  </div>
+
+  <!-- SAVOIR_FAIRE -->
+  <div id="savoir_faire"></div>
+  <div class="container-fluid savoir_faire">
+    <div class="container">
+      {{ include('includes/savoir_faire/inc_savoir_faire.html.twig')}}
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact"></div>
+  <div class="container-fluid contact">
+    <div class="container">
+      {{ include('includes/contact/inc_contact.html.twig')}}
+    </div>
+  </div>
+{% endblock %}
